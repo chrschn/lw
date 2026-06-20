@@ -11,6 +11,7 @@ theme = 'lightwave'
   description = "A premium Hugo site for Lightwave Music & Event Company."
   author = "Lightwave Team"
   logo = "img/lightwave_logo.svg"
+  logoDark = "img/lightwave_logo_white.svg"
 
 [params.contact]
   email = "info@lightwave.show"

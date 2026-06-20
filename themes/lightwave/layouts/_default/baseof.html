@@ -19,7 +19,12 @@
         <nav class="navbar">
             <div class="container">
                 <a href="{{ .Site.BaseURL | relURL }}" class="logo">
-                    <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}">
+                    <picture>
+                        {{ with .Site.Params.logoDark }}
+                        <source media="(prefers-color-scheme: dark)" srcset="{{ . | relURL }}">
+                        {{ end }}
+                        <img src="{{ .Site.Params.logo | relURL }}" alt="{{ .Site.Title }}">
+                    </picture>
                 </a>
                 <ul class="nav-links">
                     {{ range .Site.Menus.main }}

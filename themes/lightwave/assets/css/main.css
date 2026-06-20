@@ -1099,3 +1099,62 @@ section {
         padding: 2.5rem;
     }
 }
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-light: #121212;
+        --bg-alt: #1e1e1e;
+        --bg-alt-trans: #1e1e1ecc;
+        --text-dark: #f1f1f1;
+        --text-muted: #a0a0a0;
+        --glass-bg: rgba(18, 18, 18, 0.8);
+        --glass-border: rgba(255, 255, 255, 0.1);
+        --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+        --hero-grad-1a: rgba(0, 180, 204, 0.15);
+        --hero-grad-2a: rgba(50, 255, 126, 0.05);
+        --hero-grad-1b: rgba(197, 108, 240, 0.15);
+        --hero-grad-2b: rgba(0, 180, 204, 0.1);
+    }
+
+    .preset-hero a:not(:nth-of-type(2)),
+    .preset-contact a,
+    .btn-primary {
+        background: var(--text-dark);
+        color: var(--bg-light);
+    }
+
+    .preset-hero a:nth-of-type(2),
+    .btn-secondary {
+        border-color: var(--text-dark);
+        color: var(--text-dark);
+    }
+
+    .service-card {
+        background: var(--bg-alt);
+        border: 1px solid var(--glass-border);
+    }
+
+    .blog-card:hover {
+        background: var(--bg-light);
+    }
+
+    .preset-timeline li::before {
+        background: var(--bg-light);
+        border-color: var(--glass-border);
+    }
+
+    .preset-packages .container > ul > li {
+        background: var(--bg-alt);
+        border-color: var(--glass-border);
+    }
+
+    .preset-packages .container > ul > li:hover {
+        border-color: var(--accent-purple);
+    }
+
+    .preset-packages .container > ul > li p:last-of-type {
+        border-top-color: var(--glass-border);
+    }
+}
